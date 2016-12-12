@@ -12,9 +12,11 @@ if __name__ == "__main__":
             for line in lines:
                 fields = line.split(",")
                 index = 5
-                if test_flag == 1:
+                end = 14
+                if test_flag == "1":
                     index = 4
-                while index < 14:
+                    end = 13
+                while index < end:
                     fields[index] = str(hash(fields[index]) % 1000000)
                     index += 1
 
